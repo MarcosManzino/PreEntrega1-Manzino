@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/PreEntrega1-Manzino/static/css/main.198e8e4a.css",
+    "main.css": "/PreEntrega1-Manzino/static/css/main.80a1d102.css",
     "main.js": "/PreEntrega1-Manzino/static/js/main.d570e0b0.js",
     "static/js/787.28cb0dcd.chunk.js": "/PreEntrega1-Manzino/static/js/787.28cb0dcd.chunk.js",
     "static/media/buzo.jpg": "/PreEntrega1-Manzino/static/media/buzo.469f0dd2f0a19e551506.jpg",
@@ -8,12 +8,12 @@
     "static/media/zapas.jpg": "/PreEntrega1-Manzino/static/media/zapas.03c8c30c83fcbb7c2512.jpg",
     "static/media/camperas.jpg": "/PreEntrega1-Manzino/static/media/camperas.0a56cecae6fad7c184c7.jpg",
     "index.html": "/PreEntrega1-Manzino/index.html",
-    "main.198e8e4a.css.map": "/PreEntrega1-Manzino/static/css/main.198e8e4a.css.map",
+    "main.80a1d102.css.map": "/PreEntrega1-Manzino/static/css/main.80a1d102.css.map",
     "main.d570e0b0.js.map": "/PreEntrega1-Manzino/static/js/main.d570e0b0.js.map",
     "787.28cb0dcd.chunk.js.map": "/PreEntrega1-Manzino/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.198e8e4a.css",
+    "static/css/main.80a1d102.css",
     "static/js/main.d570e0b0.js"
   ]
 }
