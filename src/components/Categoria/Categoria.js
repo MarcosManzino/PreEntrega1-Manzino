@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Categoria({ nombre, imgSrc }) {
 
@@ -17,8 +18,8 @@ export default function Categoria({ nombre, imgSrc }) {
     }
 
     return (
-        <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} id="ropa-1"><a href="./html/tienda.html"><img src={imgSrc} alt="Logo" /></a>
-            <p id="ocultar-1" className={`ropa-oculto ${isHovering ? "ocultar" : ""} `} href="">{nombre}</p>
+        <li onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} id="ropa-1"><Link to={`producto/${nombre}`}><img src={imgSrc} alt="Logo" /></Link>
+            <p id="ocultar-1" className={`ropa-oculto ${isHovering ? "ocultar" : ""} `}>{nombre}</p>
         </li>
     )
 

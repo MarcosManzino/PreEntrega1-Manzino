@@ -1,6 +1,6 @@
 
-import logo from "../imagenes/logo.png";
-import CartWidget from './CartWidget';
+import { Link } from "react-router-dom";
+import CartWidget from "../CartWidget/CartWidget";
 
 
 export default function NavBar() {
@@ -16,7 +16,7 @@ export default function NavBar() {
                 </select>
                 
                 <div className="cuerpo-up-logo">
-                    <a className="logo" href="index.html"><img src={logo} alt="Logo" /></a>
+                    <Link className="logo" to="/"><img src={process.env.PUBLIC_URL + '/img/logo.png'} alt="Logo" /></Link>
 
                 </div>
 
