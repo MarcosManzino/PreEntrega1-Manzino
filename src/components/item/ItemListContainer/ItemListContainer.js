@@ -1,23 +1,25 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import products from "../../products/products";
+
+
 
 export default function ItemListContainer({ greeting }) {
 
     const [users, setUsers] = useState([]);
-    const { category } = useParams(); // Obtener la categoría de la URL
+    const { category } = useParams(); 
 
     useEffect(() => {
         const promesaItem = new Promise((resolve, reject) => {
             setTimeout(() => {
-                // Filtrar los productos por la categoría
+                
                 let encontrados = products.filter((item) => item.categoria === category);
                 resolve(encontrados);
             }, 100);
         });
 
         promesaItem.then((respuesta) => setUsers(respuesta));
-    }, [category]); // Agregar la categoría como dependencia del useEffect
+    }, [category]); 
 
     return (
 
@@ -30,7 +32,7 @@ export default function ItemListContainer({ greeting }) {
                         <p>{user.precio}</p>
                         <div>
                             <button>añadir al carrito</button>
-                            <button>ver mas</button>
+                            <button> <Link to={`${user.id}`}>Ver mas</Link> </button>
                         </div>
                     </li>
                 ))}
