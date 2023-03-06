@@ -5,13 +5,13 @@ export default function Categoria({ nombre, imgSrc }) {
 
     const [isHovering, setisHovering] = useState(false);
 
-    function handleMouseEnter(e) {
+    function handleMouseEnter() {
         setisHovering(true)
 
 
     }
 
-    function handleMouseLeave(e) {
+    function handleMouseLeave() {
         setisHovering(false)
 
 

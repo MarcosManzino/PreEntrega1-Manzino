@@ -28,6 +28,46 @@ a {
 
 }
 
+button {
+
+  font-family: 'Bebas Neue', cursive;
+  margin-top: 5px;
+  font-size: 25px;
+  border-radius: 10px;
+  background-color: rgb(205, 205, 205);
+  padding: 2px 10px;
+  cursor: pointer;
+
+  color: white;
+  margin-top: 8px;
+  background-color: #ffffff00;
+  border: solid 1px white;
+
+  display: flex;
+  color: white;
+  align-items: center;
+
+}
+
+button a {
+  display: flex;
+  color: white;
+  align-items: center;
+}
+
+.volver {
+  margin-left: 50px;
+  font-size: 30px;
+}
+
+
+button:hover {
+  animation: animacion 1s;
+  box-shadow: 0px 0px 5px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb;
+  box-shadow: 0px 0px 5px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb;
+  scale: 1.1;
+}
+
 /*----------------------------------------------------------------- generales fin -----------------------------------------------------------------*/
 
 /*----------------------------------------------------------------- header -----------------------------------------------------------------*/
@@ -91,6 +131,7 @@ header .cuerpo-up-2:hover {
 /* tienda */
 .tienda {
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .tienda:hover {
@@ -241,7 +282,7 @@ main {
     opacity: 100%;
 
 
-    
+
   }
 
   100% {
@@ -273,13 +314,13 @@ h1 {
   object-fit: cover;
   border-radius: 30px;
   border: solid 0px black;
-
+  transition: 1s ease;
 
 }
 
 .cuerpo-mid .ropa img:hover {
   transform: scale(0.95);
-  transition-duration: 0.5s;
+
   rotate: 2deg;
   background-color: rgba(0, 0, 0, 0.149);
   border-radius: 30px;
@@ -295,11 +336,11 @@ h1 {
   background-color: rgba(100, 100, 100, 0.572);
   border-radius: 30px;
   box-shadow: 10px 10px 10px black;
-  transition-duration: 0.5s;
 
 }
 
 .cuerpo-mid .ropa li {
+  transition: 1s ease;
   padding: 2px;
   background-color: rgba(0, 0, 0, 0.149);
   border-radius: 30px;
@@ -391,6 +432,7 @@ h1 {
 .products .items img {
   height: 300px;
   border-radius: 25px;
+  
 }
 
 .products .items {
@@ -404,8 +446,9 @@ h1 {
   margin: 10px;
   font-size: 30px;
   border: solid white 1px;
-  box-shadow: 0px 0px 10px #9927f7, inset 0px 0px 10px #9927f7, 0px 0px 10px #9927f7, inset 0px 0px 10px #9927f7;
+  box-shadow: 0px 0px 10px #9927f7, inset 0px 0px 10px #9927f7, 0px 0px 25px #9927f7, inset 0px 0px 25px #9927f7;
 
+  transition: .4s ease-in-out;
 }
 
 .products p {
@@ -415,6 +458,7 @@ h1 {
 
 .products .items:hover {
   scale: 1.05;
+  
 }
 
 .products .items div {
@@ -424,30 +468,7 @@ h1 {
 
 }
 
-.products .items div button {
-  font-family: 'Bebas Neue', cursive;
-  margin-top: 5px;
-  font-size: 25px;
-  border-radius: 10px;
-  background-color: rgb(205, 205, 205);
-  padding: 2px 10px;
-  cursor: pointer;
 
-  color: white;
-  margin-top: 8px;
-  background-color: #ffffff00;
-  border: solid 1px white;
-
-
-
-}
-
-.products .items div button:hover {
-  animation: animacion 1s;
-  box-shadow: 0px 0px 5px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb;
-  box-shadow: 0px 0px 5px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb;
-  scale: 1.1;
-}
 
 .products a {
   color: white;
@@ -508,6 +529,25 @@ h1 {
   }
 
 }
+
+.detalle .items {
+  padding: 20px;
+  flex-direction: row;
+
+}
+
+.detalle .items img {
+  height: 400px;
+  box-shadow: 0px 0px 5px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb;
+
+}
+
+.detalle .info {
+  margin-left: 20px;
+}
+
+
+
 
 /* main contacto */
 @media (max-width: 1330px) {
