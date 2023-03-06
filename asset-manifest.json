@@ -1,19 +1,14 @@
 {
   "files": {
-    "main.css": "/PreEntrega1-Manzino/static/css/main.80a1d102.css",
-    "main.js": "/PreEntrega1-Manzino/static/js/main.d570e0b0.js",
-    "static/js/787.28cb0dcd.chunk.js": "/PreEntrega1-Manzino/static/js/787.28cb0dcd.chunk.js",
-    "static/media/buzo.jpg": "/PreEntrega1-Manzino/static/media/buzo.469f0dd2f0a19e551506.jpg",
-    "static/media/logo.png": "/PreEntrega1-Manzino/static/media/logo.1afc451d2be8382778ef.png",
-    "static/media/zapas.jpg": "/PreEntrega1-Manzino/static/media/zapas.03c8c30c83fcbb7c2512.jpg",
-    "static/media/camperas.jpg": "/PreEntrega1-Manzino/static/media/camperas.0a56cecae6fad7c184c7.jpg",
+    "main.css": "/PreEntrega1-Manzino/static/css/main.0c7b5a9b.css",
+    "main.js": "/PreEntrega1-Manzino/static/js/main.0f25c73d.js",
+    "static/media/fondo.jpg": "/PreEntrega1-Manzino/static/media/fondo.418ce04c8b03992c007e.jpg",
     "index.html": "/PreEntrega1-Manzino/index.html",
-    "main.80a1d102.css.map": "/PreEntrega1-Manzino/static/css/main.80a1d102.css.map",
-    "main.d570e0b0.js.map": "/PreEntrega1-Manzino/static/js/main.d570e0b0.js.map",
-    "787.28cb0dcd.chunk.js.map": "/PreEntrega1-Manzino/static/js/787.28cb0dcd.chunk.js.map"
+    "main.0c7b5a9b.css.map": "/PreEntrega1-Manzino/static/css/main.0c7b5a9b.css.map",
+    "main.0f25c73d.js.map": "/PreEntrega1-Manzino/static/js/main.0f25c73d.js.map"
   },
   "entrypoints": [
-    "static/css/main.80a1d102.css",
-    "static/js/main.d570e0b0.js"
+    "static/css/main.0c7b5a9b.css",
+    "static/js/main.0f25c73d.js"
   ]
 }
