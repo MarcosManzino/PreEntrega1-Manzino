@@ -432,7 +432,7 @@ h1 {
 .products .items img {
   height: 300px;
   border-radius: 25px;
-  
+
 }
 
 .products .items {
@@ -458,10 +458,10 @@ h1 {
 
 .products .items:hover {
   scale: 1.05;
-  
+
 }
 
-.products .items div {
+.products .items .info {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -546,7 +546,101 @@ h1 {
   margin-left: 20px;
 }
 
+.selebet {
+  display: flex;
+  align-items: center;
+}
 
+.detalle .selec {
+  background-color: rgba(0, 0, 0, 0);
+  margin-top: 8px;
+  color: white;
+  padding: 2px;
+  border-radius: 10px;
+  margin-left: 10px;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 20px;
+  border: solid 1px white;
+}
+
+.opt {
+  background-color: #000000;
+  border-radius: 10px;
+
+}
+
+.detalle .selec:hover {
+  animation: animacion 1s;
+  box-shadow: 0px 0px 5px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb;
+  box-shadow: 0px 0px 5px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb;
+  scale: 1.1;
+}
+
+
+.cartContainer {
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 70%;
+  min-width: 70%;
+
+  justify-content: center;
+}
+
+.total-2 {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+}
+
+.cartContainer .cart {
+
+  display: flex;
+  border: solid white 1px;
+  padding: 20px;
+  margin: 10px;
+  flex-direction: column;
+  align-items: center;
+  font-size: 23px;
+  border-radius: 10px;
+
+}
+
+.cartContainer .cart:hover {
+  animation: animacion 1s;
+  box-shadow: 0px 0px 5px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb;
+  box-shadow: 0px 0px 5px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb;
+  scale: 1.02;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartContainer .cart .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cartContainer img {
+  height: 400px;
+  border-radius: 10px;
+}
+
+.flexx {
+  display: flex;
+  color: white;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 90%;
+  
+
+}
 
 
 /* main contacto */
@@ -624,6 +718,91 @@ h1 {
 }
 
 
+/* formulario */
+.form-sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 30%;
+  min-width: 10%;
+}
 
+form {
+  background: rgba(0, 0, 0, 0.164);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+  width: 150%;
+  border-radius: 20px;
+  padding: 5%;
+  border: solid 1px #ffffff;
+}
+
+form:hover {
+  animation: animacion 1s;
+  box-shadow: 0px 0px 5px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb;
+  box-shadow: 0px 0px 5px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb;
+  scale: 1.01;
+}
+
+form h1 {
+  color: white;
+  font-size: 2.3rem;
+
+}
+
+form input {
+  border: solid 2px #ffffff;
+  border-radius: 8px;
+  font-family: monospace;
+  width: 90%;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1vh;
+  background: rgba(0, 0, 0, 0.13);
+  color: aliceblue;
+
+}
+form input:hover{
+  animation: animacion 1s;
+  box-shadow: 0px 0px 5px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb;
+  box-shadow: 0px 0px 5px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb, inset 0px 0px 15px #9927fb;
+  scale: 1.03;
+  width: 94%;
+}
+
+input::placeholder {
+  box-shadow: inset 0px 0px 15px rgba(255, 0, 0, 0.279);
+}
+
+@media (max-width: 600px) {
+  form {
+    width: 80%;
+    margin-top: 5vh
+  }
+
+  form input {
+    width: 60vw;
+    font-size: large;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    background: #fff;
+    color: black;
+  }
+
+  input::placeholder {
+    color: rgba(0, 0, 0, 0.575);
+    font-size: large;
+  }
+
+  button {
+    width: 40vw;
+    padding: 10px;
+  }
+}
+
+/* formulario */
 
 /*----------------------------------------------------------------- main fin -----------------------------------------------------------------*/

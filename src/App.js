@@ -1,3 +1,4 @@
+import ShoppingCart from './context/carrito';
 import ItemListContainer from './components/item/ItemListContainer/ItemListContainer';
 import './App.css';
 import NavBar from './components/NavNar/NavBar';
@@ -5,10 +6,12 @@ import Botones from './components/Botones/Botones';
 import React from "react";
 import ItemDetailContainer from './components/item/ItemDetailContainer/ItemDitailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import CartT from './components/CartWidget/Cart';
 
 export default function App() {
   return (
-    <>
+    <ShoppingCart>
+
       <BrowserRouter basename={process.env.PUBLIC_URL}>
         <main className="cuerpo-mid mid">
 
@@ -35,14 +38,15 @@ export default function App() {
           <Routes>
 
             <Route path="/" element={<Botones />} />
-            <Route path="producto/:category" element={<ItemListContainer greeting={<h1 className='Titulo'> Los mejores productos </h1>} />} />
+            <Route path="/producto/:category" element={<ItemListContainer greeting={<h1 className='Titulo'> Los mejores productos </h1>} />} />
             <Route path="/:idUsers" element={<ItemDetailContainer greeting={""} />} />
+            <Route path="/cart" element={<CartT greeting={""} />} />
 
           </Routes>
 
         </main>
       </BrowserRouter>
-    </>
+    </ShoppingCart>
 
   );
 }
