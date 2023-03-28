@@ -6,12 +6,116 @@ import { CartContext } from "../../../context/carrito";
 import { useContext } from "react";
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//import base
+import { collection, getDocs } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
+
+
+// base-----------------------
+
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyD8h1c939AbSaNEhj5e-1M9SLPLkcUqcUI",
+  authDomain: "react-manzino.firebaseapp.com",
+  projectId: "react-manzino",
+  storageBucket: "react-manzino.appspot.com",
+  messagingSenderId: "68079110821",
+  appId: "1:68079110821:web:a873a9e506ebf12d125b4c"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+
+
+
+//base--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export default function ItemDetail({ greeting }) {
   const [user, setUsers] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const params = useParams();
   const idUsers = params.idUsers;
   const { agregarAlCarrito } = useContext(CartContext);
+
+
+
+
+
+
+
+
+
+
+
+
+
+  async function getItemsForDatabase() {
+    const productosColectionRef = collection(db, "products")
+
+    let snapshotProduct = await getDocs(productosColectionRef)
+    const documents = snapshotProduct.docs;
+
+    const dataProduct = documents.map(doc => {
+      const product = doc.data();
+      product.id = doc.id;
+      return product
+    })
+
+
+    return dataProduct
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   const handleAdd = () => {
@@ -21,27 +125,22 @@ export default function ItemDetail({ greeting }) {
   const handleCantidad = e => {
     setUsers({ ...user, cantidad: Number(e.target.value) })
 
+
   }
   console.log(user)
 
   useEffect(() => {
-    const promesaItem = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        let encontrado = products.find((item) => item.id === Number(idUsers));
-        encontrado["cantidad"] = 1
-        if (encontrado) {
+    async function getProducts() {
+      const producto = await getItemsForDatabase();
+      let encontrado = producto.find((item) => item.id === idUsers);
+      encontrado["cantidad"] = 1
+      setUsers(encontrado)
+      console.log(encontrado)
 
-          resolve(encontrado);
-        } else {
+    }
+    getProducts()
 
-          reject("User not found");
-        }
-      }, 2000);
-    });
 
-    promesaItem
-      .then((respuesta) => setUsers(respuesta))
-      .catch((error) => console.log(error));
   }, [idUsers]);
 
   useEffect(() => {

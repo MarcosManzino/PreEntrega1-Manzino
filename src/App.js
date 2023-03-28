@@ -8,6 +8,7 @@ import ItemDetailContainer from './components/item/ItemDetailContainer/ItemDitai
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CartT from './components/CartWidget/Cart';
 
+
 export default function App() {
   return (
     <ShoppingCart>
