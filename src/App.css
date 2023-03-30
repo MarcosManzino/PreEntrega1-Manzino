@@ -582,11 +582,23 @@ h1 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 70%;
-  min-width: 70%;
+
 
   justify-content: center;
 }
+.eliminar{
+border: none;
+position: relative;
+margin-left: 90%;
+margin-bottom: 2%;
+margin-top: -3%;
+}
+.eliminar:hover{
+animation: none;
+box-shadow: none;
+scale: 1.4;
+  }
+
 
 .total-2 {
   font-size: 40px;
@@ -634,10 +646,9 @@ h1 {
 .flexx {
   display: flex;
   color: white;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column-reverse;
   justify-content: space-around;
-  max-width: 90%;
+  align-items: center;
   
 
 }
@@ -723,8 +734,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 30%;
-  min-width: 10%;
+margin-bottom: 20px;
 }
 
 form {

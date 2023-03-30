@@ -1,0 +1,5 @@
+El proyecto consiste en una tienda de ropa. Quería darle un estilo atractivo, pero no quedé completamente satisfecho. Tuve que omitir algunas características como las categorías desplegables por cuestiones visuales, reemplazándolas por otras que se pueden ver en la página de inicio.
+
+A pesar de algunas frustraciones, decidí no añadir estas características que me gustarian para no complicarme y agregarlas más adelante cuando tenga el tiempo necesario. El proyecto no tiene ningún paquete npm extraño o nada fuera de lo común. La página está probada y no debería tener ningún tipo de error. La navegación es limpia y dinámica, y creo que no me estoy olvidando de nada importante.
+
+Mi objetivo es obtener una puntuación de 10 en este proyecto. Las clases fueron muy útiles en la elaboración del mismo.

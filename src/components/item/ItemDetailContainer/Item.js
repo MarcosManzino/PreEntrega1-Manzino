@@ -18,8 +18,7 @@ export default function Item({ producto }) {
 
 
     }
-
-
+ 
 
 
     return (
@@ -27,7 +26,6 @@ export default function Item({ producto }) {
             <img alt="/" src={process.env.PUBLIC_URL + producto.img[isHovering ? 1 : 0]} />
             <p>${producto.precio.toLocaleString('es-ES')}</p>
             <div className="center">
-                <button>añadir al carrito</button>
                 <button> <Link to={`/${producto.id}`}>Ver mas</Link> </button>
             </div>
         </li>

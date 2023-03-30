@@ -1,70 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import products from "../../products/products";
 import { IoIosArrowRoundBack } from 'react-icons/io';
 import { CartContext } from "../../../context/carrito";
 import { useContext } from "react";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//import base
-import { collection, getDocs } from "firebase/firestore";
-import { getFirestore } from "firebase/firestore";
-
-
-// base-----------------------
-
-
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyD8h1c939AbSaNEhj5e-1M9SLPLkcUqcUI",
-  authDomain: "react-manzino.firebaseapp.com",
-  projectId: "react-manzino",
-  storageBucket: "react-manzino.appspot.com",
-  messagingSenderId: "68079110821",
-  appId: "1:68079110821:web:a873a9e506ebf12d125b4c"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-
-
-
-//base--------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import { getItemsForDatabase } from "../../../services/firestore";
 
 
 
@@ -76,48 +15,6 @@ export default function ItemDetail({ greeting }) {
   const { agregarAlCarrito } = useContext(CartContext);
 
 
-
-
-
-
-
-
-
-
-
-
-
-  async function getItemsForDatabase() {
-    const productosColectionRef = collection(db, "products")
-
-    let snapshotProduct = await getDocs(productosColectionRef)
-    const documents = snapshotProduct.docs;
-
-    const dataProduct = documents.map(doc => {
-      const product = doc.data();
-      product.id = doc.id;
-      return product
-    })
-
-
-    return dataProduct
-
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   const handleAdd = () => {
     agregarAlCarrito(user);
 
@@ -127,7 +24,7 @@ export default function ItemDetail({ greeting }) {
 
 
   }
-  console.log(user)
+
 
   useEffect(() => {
     async function getProducts() {
@@ -135,7 +32,7 @@ export default function ItemDetail({ greeting }) {
       let encontrado = producto.find((item) => item.id === idUsers);
       encontrado["cantidad"] = 1
       setUsers(encontrado)
-      console.log(encontrado)
+   
 
     }
     getProducts()

@@ -18,9 +18,14 @@ const ShoppingCart = ({ children }) => {
 
     }
 
+    const vaciarCarrito= ()=>{
+        setCart ({})
+    }
+
+
 
     return (
-        <CartContext.Provider value={{ cart, setCart, agregarAlCarrito }}>{children}</CartContext.Provider>
+        <CartContext.Provider value={{ cart, setCart, agregarAlCarrito,  vaciarCarrito}}>{children}</CartContext.Provider>
     )
 }
 

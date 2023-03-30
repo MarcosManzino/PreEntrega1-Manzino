@@ -1,32 +1,21 @@
 import { useContext } from "react"
 import { CartContext } from "../../context/carrito";
-import { useState } from "react";
-import { useEffect } from "react";
+import { BsFillTrash3Fill } from "react-icons/bs";
+import Checkout from "./Checkout";
+
 
 
 
 const CartT = () => {
   const { cart } = useContext(CartContext);
+  const { vaciarCarrito } = useContext(CartContext)
   const cartObject = Object.values(cart);
-  const [form, setForm] = useState({ nombre: "", apellido: "", numero: 0, email1: "", email2: "" });
-  const [esCompra, setEsCompra] = useState(false);
+
   let precioTotal = cartObject.reduce(
     (total, item) => total + item.precio * item.cantidad,
     0);
-  console.log(cartObject)
-
-  useEffect(() => {
-    if (form.nombre && form.apellido && Number(form.numero) && form.email1 && (form.email1 === form.email2)) {
-      setEsCompra(true)
-    }
-  }, [form])
 
 
-  const handleChange = e => {
-    setForm({ ...form, [e.target.name]: e.target.value })
-  }
-
-  console.log(form)
 
 
 
@@ -43,8 +32,8 @@ const CartT = () => {
             {cartObject.map(producto => (
 
               <div className="cart" key={producto.id}>
-                <img variant="top" src={process.env.PUBLIC_URL + producto.img[0]} />
-                {/* IGM MAS CHICA */}
+                <button className="eliminar" onClick={vaciarCarrito}><BsFillTrash3Fill/></button>
+                <img variant="top" alt={"imagen de" + producto.titulo} src={process.env.PUBLIC_URL + producto.img[0]} />
                 <div className="text">
                   <p>{producto.titulo}</p>
                   <p>${producto.precio.toLocaleString('es-ES')}</p>
@@ -58,15 +47,8 @@ const CartT = () => {
         </div>
         <div className="form-sign">
 
-          <form action="">
-            <h1>Informacion de compra</h1>
-            <input onChange={handleChange} name="nombre" type="text" placeholder="Name" />
-            <input onChange={handleChange} name="apellido" type="text" placeholder="Last name" />
-            <input onChange={handleChange} name="numero" type="text" placeholder="phone Number" />
-            <input onChange={handleChange} name="email1" type="email" placeholder="Email" />
-            <input onChange={handleChange} name="email2" type="email" placeholder="Email" />
-            <button disabled={!esCompra} >Comprar</button>
-          </form>
+
+          <Checkout precio={precioTotal} cart={cart} />
         </div>
 
 
