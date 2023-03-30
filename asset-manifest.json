@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/PreEntrega1-Manzino/static/css/main.0c7b5a9b.css",
-    "main.js": "/PreEntrega1-Manzino/static/js/main.2e59f8ff.js",
+    "main.css": "/PreEntrega1-Manzino/static/css/main.c5b537c5.css",
+    "main.js": "/PreEntrega1-Manzino/static/js/main.fc74058f.js",
     "static/media/fondo.jpg": "/PreEntrega1-Manzino/static/media/fondo.418ce04c8b03992c007e.jpg",
     "index.html": "/PreEntrega1-Manzino/index.html",
-    "main.0c7b5a9b.css.map": "/PreEntrega1-Manzino/static/css/main.0c7b5a9b.css.map",
-    "main.2e59f8ff.js.map": "/PreEntrega1-Manzino/static/js/main.2e59f8ff.js.map"
+    "main.c5b537c5.css.map": "/PreEntrega1-Manzino/static/css/main.c5b537c5.css.map",
+    "main.fc74058f.js.map": "/PreEntrega1-Manzino/static/js/main.fc74058f.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c7b5a9b.css",
-    "static/js/main.2e59f8ff.js"
+    "static/css/main.c5b537c5.css",
+    "static/js/main.fc74058f.js"
   ]
 }
